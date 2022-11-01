@@ -43,7 +43,8 @@ class LoginViewController: UIViewController {
     
     private func forgotPasswordScene() {
         let forgotPassword = ForgotPasswordViewController()
-        navigationController?.pushViewController(forgotPassword, animated: true)
+        forgotPassword.modalPresentationStyle = .overFullScreen
+        present(forgotPassword, animated: true)
     }
     
     // MARK: Actions

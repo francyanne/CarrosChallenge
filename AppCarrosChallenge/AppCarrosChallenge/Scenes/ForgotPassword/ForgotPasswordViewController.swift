@@ -17,7 +17,6 @@ class ForgotPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        setNavigationBarStyle()
     }
     
     // MARK: Methods
@@ -25,24 +24,27 @@ class ForgotPasswordViewController: UIViewController {
         textFieldLoginEmail.borderStyle = .none
     }
     
-    private func setNavigationBarStyle() {
-        let appearence = UINavigationBarAppearance()
-        if #available(iOS 15, *) {
-            appearence.configureWithOpaqueBackground()
-            appearence.backgroundColor = .gray
-            //            appearence.titleTextAttributes = textAttributes
-            navigationController?.navigationBar.standardAppearance = appearence
-            navigationController?.navigationBar.scrollEdgeAppearance = appearence
-            navigationController?.navigationBar.barTintColor = .gray
-            navigationController?.navigationBar.backgroundColor = . gray
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        present(alert, animated: true)
+    }
+    
+    private func checkIfTextFieldIsFill() {
+        if textFieldLoginEmail.text != "" {
+            showAlert(title: "Ops...", message: "Tente novamente mais tarde.")
+        } else {
+            showAlert(title: "Erro", message: "Preencha o campo")
         }
     }
     
     // MARK: Actions
     @IBAction func handlerButtonCancel(_ sender: Any) {
+        textFieldLoginEmail.text = ""
         dismiss(animated: true)
     }
     
     @IBAction func handlerButtonSend(_ sender: Any) {
+        checkIfTextFieldIsFill()
     }
 }

@@ -27,6 +27,7 @@
 		5C736713290C5FC9002B6316 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C736711290C5FC9002B6316 /* LaunchScreen.storyboard */; };
 		5C73671C290C6138002B6316 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73671A290C6138002B6316 /* LoginViewController.swift */; };
 		5C73671D290C6138002B6316 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C73671B290C6138002B6316 /* LoginViewController.xib */; };
+		5C99E13D2910959700A0F2FD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99E13C2910959700A0F2FD /* UIColor+Extension.swift */; };
 		DBD5F929FAF218124AB0C583 /* Pods_AppCarrosChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6168F3D2541BEC3EEDE6F4F8 /* Pods_AppCarrosChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		5C736714290C5FC9002B6316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C73671A290C6138002B6316 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5C73671B290C6138002B6316 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		5C99E13C2910959700A0F2FD /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		6168F3D2541BEC3EEDE6F4F8 /* Pods_AppCarrosChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCarrosChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0309FBBE9053B51200BE12A /* Pods-AppCarrosChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCarrosChallenge.release.xcconfig"; path = "Target Support Files/Pods-AppCarrosChallenge/Pods-AppCarrosChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		F5C40D1CAA222708D5AFF039 /* Pods-AppCarrosChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCarrosChallenge.debug.xcconfig"; path = "Target Support Files/Pods-AppCarrosChallenge/Pods-AppCarrosChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				5C51045429108DBF005A35E3 /* Animation.swift */,
+				5C99E13C2910959700A0F2FD /* UIColor+Extension.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				5C00269C290C733800050D39 /* LoginModel.swift in Sources */,
 				5C736707290C5FC9002B6316 /* AppDelegate.swift in Sources */,
 				5C2D9993290D11EB00C56E5A /* APIError.swift in Sources */,
+				5C99E13D2910959700A0F2FD /* UIColor+Extension.swift in Sources */,
 				5C002699290C732700050D39 /* LoginViewModel.swift in Sources */,
 				5C51044929102F98005A35E3 /* CarsTableViewCell.swift in Sources */,
 				5C2D9996290EB62800C56E5A /* CarsViewController.swift in Sources */,
