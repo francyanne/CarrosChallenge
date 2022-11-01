@@ -26,15 +26,18 @@ class CarsViewController: UIViewController {
     }
     
     private func setupNavigationBar() {
+        title = "Carros"
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white,
+                              NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21)]
         let appearence = UINavigationBarAppearance()
         if #available(iOS 15, *) {
             appearence.configureWithOpaqueBackground()
-            appearence.backgroundColor = .green
-            //            appearence.titleTextAttributes = textAttributes
+            appearence.backgroundColor = .greenApp
+            appearence.titleTextAttributes = textAttributes
             navigationController?.navigationBar.standardAppearance = appearence
             navigationController?.navigationBar.scrollEdgeAppearance = appearence
-            navigationController?.navigationBar.barTintColor = .green
-            navigationController?.navigationBar.backgroundColor = . green
+            navigationController?.navigationBar.barTintColor = .greenApp
+            navigationItem.hidesBackButton = true
         }
     }
     
@@ -95,7 +98,7 @@ extension CarsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

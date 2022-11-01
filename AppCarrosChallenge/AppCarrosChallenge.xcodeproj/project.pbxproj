@@ -28,6 +28,8 @@
 		5C73671C290C6138002B6316 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C73671A290C6138002B6316 /* LoginViewController.swift */; };
 		5C73671D290C6138002B6316 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C73671B290C6138002B6316 /* LoginViewController.xib */; };
 		5C99E13D2910959700A0F2FD /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99E13C2910959700A0F2FD /* UIColor+Extension.swift */; };
+		5C99E14029109BF900A0F2FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C99E13E29109BF900A0F2FD /* DetailViewController.swift */; };
+		5C99E14129109BF900A0F2FD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C99E13F29109BF900A0F2FD /* DetailViewController.xib */; };
 		DBD5F929FAF218124AB0C583 /* Pods_AppCarrosChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6168F3D2541BEC3EEDE6F4F8 /* Pods_AppCarrosChallenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		5C73671A290C6138002B6316 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5C73671B290C6138002B6316 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		5C99E13C2910959700A0F2FD /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		5C99E13E29109BF900A0F2FD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5C99E13F29109BF900A0F2FD /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		6168F3D2541BEC3EEDE6F4F8 /* Pods_AppCarrosChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppCarrosChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0309FBBE9053B51200BE12A /* Pods-AppCarrosChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCarrosChallenge.release.xcconfig"; path = "Target Support Files/Pods-AppCarrosChallenge/Pods-AppCarrosChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		F5C40D1CAA222708D5AFF039 /* Pods-AppCarrosChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppCarrosChallenge.debug.xcconfig"; path = "Target Support Files/Pods-AppCarrosChallenge/Pods-AppCarrosChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			children = (
 				5C73671E290C6148002B6316 /* Login */,
 				5C2D9998290EB62E00C56E5A /* Cars */,
+				5C99E14229109BFF00A0F2FD /* Detail */,
 				5C51045E2910933B005A35E3 /* ForgotPassword */,
 			);
 			path = Scenes;
@@ -169,9 +174,9 @@
 			isa = PBXGroup;
 			children = (
 				5C51045329108DB0005A35E3 /* Commons */,
+				5C002697290C62A200050D39 /* Scenes */,
 				5C736720290C6187002B6316 /* Sources */,
 				5C73671F290C6155002B6316 /* Resources */,
-				5C002697290C62A200050D39 /* Scenes */,
 			);
 			path = AppCarrosChallenge;
 			sourceTree = "<group>";
@@ -206,6 +211,15 @@
 				5C51045129107808005A35E3 /* SessionManager.swift */,
 			);
 			path = Sources;
+			sourceTree = "<group>";
+		};
+		5C99E14229109BFF00A0F2FD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				5C99E13E29109BF900A0F2FD /* DetailViewController.swift */,
+				5C99E13F29109BF900A0F2FD /* DetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		DB9E6EF1C5430A4471BFC3D1 /* Frameworks */ = {
@@ -279,6 +293,7 @@
 				5C736713290C5FC9002B6316 /* LaunchScreen.storyboard in Resources */,
 				5C5104592910902B005A35E3 /* loginLoading.json in Resources */,
 				5C51045D29109125005A35E3 /* ForgotPasswordViewController.xib in Resources */,
+				5C99E14129109BF900A0F2FD /* DetailViewController.xib in Resources */,
 				5C736710290C5FC9002B6316 /* Assets.xcassets in Resources */,
 				5C73671D290C6138002B6316 /* LoginViewController.xib in Resources */,
 				5C2D9997290EB62800C56E5A /* CarsViewController.xib in Resources */,
@@ -347,6 +362,7 @@
 				5C51044929102F98005A35E3 /* CarsTableViewCell.swift in Sources */,
 				5C2D9996290EB62800C56E5A /* CarsViewController.swift in Sources */,
 				5C51045C29109125005A35E3 /* ForgotPasswordViewController.swift in Sources */,
+				5C99E14029109BF900A0F2FD /* DetailViewController.swift in Sources */,
 				5C51045529108DBF005A35E3 /* Animation.swift in Sources */,
 				5C51045229107808005A35E3 /* SessionManager.swift in Sources */,
 			);

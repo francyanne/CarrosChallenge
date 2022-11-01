@@ -9,4 +9,5 @@ import UIKit
 
 extension UIColor {
     static let grayApp = UIColor(named: "grayApp")
+    static let greenApp = UIColor(named: "greenApp")
 }
