@@ -24,12 +24,6 @@ class ForgotPasswordViewController: UIViewController {
         textFieldLoginEmail.borderStyle = .none
     }
     
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        present(alert, animated: true)
-    }
-    
     private func checkIfTextFieldIsFill() {
         if textFieldLoginEmail.text != "" {
             showAlert(title: "Ops...", message: "Tente novamente mais tarde.")

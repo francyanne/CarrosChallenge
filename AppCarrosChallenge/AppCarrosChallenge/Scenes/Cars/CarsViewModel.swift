@@ -6,16 +6,22 @@
 //
 
 import Foundation
+import SDWebImage
 
 class CarsViewModel {
-    
+    // MARK: Properties
     var didSuccess: ((Cars) -> Void)?
     var didFailure: ((APIError) -> Void)?
+    var detail = DetailViewController()
     
     let tokenAccess = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjY4MTAzNjEwLCJyb2wiOlsiUk9MRV9VU0VSIl19.Mo2bpTuzx3KbnlJMUC7GGjfd1hnQmSiuFuMLAVO1I2nAfrUfetBypDFa4CfmNOHZg1WwarqbPRdrLcTSumv4IQ"
     
+    // MARK: Services
     private func getCarsRequest(completion: @escaping ((Result<Cars, Error>) -> Void)) {
-        guard let url = URL(string: "https://carros-springboot.herokuapp.com/api/v2/carros") else { return }
+        guard let url = URL(string: "https://carros-springboot.herokuapp.com/api/v2/carros") else {
+            completion(.failure(APIError.badUrl))
+            return
+        }
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = ["Authorization":"Bearer \(tokenAccess)"]
         
@@ -30,10 +36,7 @@ class CarsViewModel {
             }
             do {
                 let cars = try JSONDecoder().decode(Cars.self, from: data)
-                SessionManager.shared.name = cars[1].nome
-                print(SessionManager.shared.name = cars[1].nome)
                 completion(.success(cars))
-                print(cars)
             } catch {
                 print(error.localizedDescription)
             }

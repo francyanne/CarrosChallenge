@@ -8,6 +8,7 @@
 import Foundation
 
 class LoginViewModel {
+    // MARK: Service
     func postLogin(user: String, password: String, completion: @escaping ((Bool) -> Void)) {
         guard let url = URL(string: "https://carros-springboot.herokuapp.com/api/v2/login") else {return}
         var request = URLRequest(url: url)
@@ -33,7 +34,7 @@ class LoginViewModel {
             
             guard let data = data else { return }
             guard let loginModel = try? JSONDecoder().decode(LoginResponseModel.self, from: data) else { return }
-            
+            print(loginModel)
         }.resume()
     }
 }

@@ -12,6 +12,8 @@
 		5C2D9993290D11EB00C56E5A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2D9992290D11EB00C56E5A /* APIError.swift */; };
 		5C2D9996290EB62800C56E5A /* CarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2D9994290EB62800C56E5A /* CarsViewController.swift */; };
 		5C2D9997290EB62800C56E5A /* CarsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C2D9995290EB62800C56E5A /* CarsViewController.xib */; };
+		5C37493F29143DB800FC73E0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C37493E29143DB800FC73E0 /* Alert.swift */; };
+		5C3749412915F96800FC73E0 /* car.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C3749402915F96800FC73E0 /* car.json */; };
 		5C510446291022CB005A35E3 /* LoginResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C510445291022CB005A35E3 /* LoginResponseModel.swift */; };
 		5C51044929102F98005A35E3 /* CarsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51044729102F98005A35E3 /* CarsTableViewCell.swift */; };
 		5C51044A29102F98005A35E3 /* CarsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C51044829102F98005A35E3 /* CarsTableViewCell.xib */; };
@@ -19,7 +21,6 @@
 		5C51044F291032C0005A35E3 /* CarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51044E291032C0005A35E3 /* CarsModel.swift */; };
 		5C51045229107808005A35E3 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51045129107808005A35E3 /* SessionManager.swift */; };
 		5C51045529108DBF005A35E3 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51045429108DBF005A35E3 /* Animation.swift */; };
-		5C5104592910902B005A35E3 /* loginLoading.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C5104582910902B005A35E3 /* loginLoading.json */; };
 		5C51045C29109125005A35E3 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C51045A29109125005A35E3 /* ForgotPasswordViewController.swift */; };
 		5C51045D29109125005A35E3 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C51045B29109125005A35E3 /* ForgotPasswordViewController.xib */; };
 		5C736707290C5FC9002B6316 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C736706290C5FC9002B6316 /* AppDelegate.swift */; };
@@ -39,6 +40,8 @@
 		5C2D9992290D11EB00C56E5A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		5C2D9994290EB62800C56E5A /* CarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewController.swift; sourceTree = "<group>"; };
 		5C2D9995290EB62800C56E5A /* CarsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsViewController.xib; sourceTree = "<group>"; };
+		5C37493E29143DB800FC73E0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		5C3749402915F96800FC73E0 /* car.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = car.json; sourceTree = "<group>"; };
 		5C510445291022CB005A35E3 /* LoginResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseModel.swift; sourceTree = "<group>"; };
 		5C51044729102F98005A35E3 /* CarsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsTableViewCell.swift; sourceTree = "<group>"; };
 		5C51044829102F98005A35E3 /* CarsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarsTableViewCell.xib; sourceTree = "<group>"; };
@@ -46,7 +49,6 @@
 		5C51044E291032C0005A35E3 /* CarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsModel.swift; sourceTree = "<group>"; };
 		5C51045129107808005A35E3 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		5C51045429108DBF005A35E3 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
-		5C5104582910902B005A35E3 /* loginLoading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loginLoading.json; sourceTree = "<group>"; };
 		5C51045A29109125005A35E3 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		5C51045B29109125005A35E3 /* ForgotPasswordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		5C736703290C5FC9002B6316 /* AppCarrosChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppCarrosChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +141,7 @@
 			children = (
 				5C51045429108DBF005A35E3 /* Animation.swift */,
 				5C99E13C2910959700A0F2FD /* UIColor+Extension.swift */,
+				5C37493E29143DB800FC73E0 /* Alert.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -195,7 +198,7 @@
 		5C73671F290C6155002B6316 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5C5104582910902B005A35E3 /* loginLoading.json */,
+				5C3749402915F96800FC73E0 /* car.json */,
 				5C73670F290C5FC9002B6316 /* Assets.xcassets */,
 				5C736711290C5FC9002B6316 /* LaunchScreen.storyboard */,
 				5C736714290C5FC9002B6316 /* Info.plist */,
@@ -291,12 +294,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C736713290C5FC9002B6316 /* LaunchScreen.storyboard in Resources */,
-				5C5104592910902B005A35E3 /* loginLoading.json in Resources */,
 				5C51045D29109125005A35E3 /* ForgotPasswordViewController.xib in Resources */,
 				5C99E14129109BF900A0F2FD /* DetailViewController.xib in Resources */,
 				5C736710290C5FC9002B6316 /* Assets.xcassets in Resources */,
 				5C73671D290C6138002B6316 /* LoginViewController.xib in Resources */,
 				5C2D9997290EB62800C56E5A /* CarsViewController.xib in Resources */,
+				5C3749412915F96800FC73E0 /* car.json in Resources */,
 				5C51044A29102F98005A35E3 /* CarsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +367,7 @@
 				5C51045C29109125005A35E3 /* ForgotPasswordViewController.swift in Sources */,
 				5C99E14029109BF900A0F2FD /* DetailViewController.swift in Sources */,
 				5C51045529108DBF005A35E3 /* Animation.swift in Sources */,
+				5C37493F29143DB800FC73E0 /* Alert.swift in Sources */,
 				5C51045229107808005A35E3 /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

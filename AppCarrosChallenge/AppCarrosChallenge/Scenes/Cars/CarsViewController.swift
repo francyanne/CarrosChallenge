@@ -11,11 +11,13 @@ import SDWebImage
 class CarsViewController: UIViewController {
     // MARK: Properties
     let viewModel = CarsViewModel()
+    let loginViewController = LoginViewController()
     var model: Cars?
     
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.getCars()
@@ -25,8 +27,18 @@ class CarsViewController: UIViewController {
         setRightNavigationItem()
     }
     
-    private func setupNavigationBar() {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         title = "Carros"
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        title = ""
+    }
+    
+    // MARK: Methods
+    private func setupNavigationBar() {
         let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white,
                               NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 21)]
         let appearence = UINavigationBarAppearance()
@@ -55,15 +67,6 @@ class CarsViewController: UIViewController {
         }
     }
     
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok",
-                                      style: .cancel))
-        present(alert, animated: true)
-    }
-    
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -79,6 +82,7 @@ class CarsViewController: UIViewController {
         navigationItem.rightBarButtonItem?.tintColor = .white
     }
     
+    // MARK: ObjcMethods
     @objc func logoutUser() {
         let alert = UIAlertController(title: "Sair",
                                       message: "Tem certeza que deseja sair?",
@@ -86,26 +90,43 @@ class CarsViewController: UIViewController {
         
         let cancel = UIAlertAction(title: "Cancelar", style: .default)
         alert.addAction(UIAlertAction(title: "Sair", style: .default, handler: { alert in
+            SessionManager.shared.clearSession()
+            AppDelegate.setRootViewController(controller: LoginViewController(), animated: true)
         }))
         alert.addAction(cancel)
         present(alert, animated: true)
     }
 }
 
+// MARK: UITableViewDelegate, UITableViewDataSource
 extension CarsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         model?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let detail = DetailViewController()
+        detail.navigationTitle = model?[indexPath.row].nome
+        detail.selectedImage = model?[indexPath.row].urlFoto
+        navigationController?.pushViewController(detail, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let verticalPadding: CGFloat = 20
+
+        let maskLayer = CALayer()
+        maskLayer.cornerRadius = 10
+        maskLayer.backgroundColor = UIColor.black.cgColor
+        maskLayer.shadowColor = UIColor.black.cgColor
+        maskLayer.borderWidth = 1
+        maskLayer.frame = CGRect(x: cell.bounds.origin.x, y: cell.bounds.origin.y, width: cell.bounds.width, height: cell.bounds.height).insetBy(dx: 0, dy: verticalPadding/2)
+        cell.layer.mask = maskLayer
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? CarsTableViewCell {
             cell.labelNameCars.text = model?[indexPath.row].nome
             cell.imageCars.sd_setImage(with: URL(string: model?[indexPath.row].urlFoto ?? ""))
-            
             return cell
         }
         return UITableViewCell()

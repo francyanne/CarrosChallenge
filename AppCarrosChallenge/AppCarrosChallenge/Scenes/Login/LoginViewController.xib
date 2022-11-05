@@ -76,7 +76,7 @@
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gop-NB-Kls">
                     <rect key="frame" x="118.5" y="352" width="43.5" height="33"/>
-                    <color key="tintColor" red="0.19828992449999999" green="0.19828992449999999" blue="0.19828992449999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.12549020350000001" green="0.2352941036" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" image="stop" catalog="system" title=""/>
                     <connections>
@@ -96,7 +96,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfr-St-xud">
                     <rect key="frame" x="15" y="422" width="384" height="51"/>
-                    <color key="backgroundColor" red="0.12549020350000001" green="0.2352941036" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <color key="backgroundColor" red="0.12549019607843137" green="0.23529411764705882" blue="0.41568627450980389" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="51" id="l3h-Vn-dLM"/>
                     </constraints>

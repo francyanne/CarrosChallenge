@@ -9,19 +9,10 @@ import UIKit
 
 class CarsTableViewCell: UITableViewCell {
     // MARK: Properties
+    let loginViewController = LoginViewController()
     var model: Cars?
     
     // MARK: Outlets
     @IBOutlet weak var imageCars: UIImageView!
     @IBOutlet weak var labelNameCars: UILabel!
-    
-    // MARK: Overrides
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-    
-    func setupUI() {
-        labelNameCars.text = "AAAA"
-    }
 }

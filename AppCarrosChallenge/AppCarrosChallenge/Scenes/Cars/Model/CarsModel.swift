@@ -7,18 +7,6 @@
 
 import Foundation
 
-//struct CarsModel: Decodable {
-//    let cars: [CarsInfo]
-//}
-//
-//struct CarsInfo: Decodable {
-//    let id: Int
-//    let nome: String
-//    let tipo: String
-//    let descricao: String
-//    let urlFoto: String
-//}
-
 struct CarsInfo: Decodable {
     let id: Int
     let nome: String
